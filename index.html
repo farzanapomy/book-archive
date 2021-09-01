@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Archive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
-<body>
-    <h1>archive</h1>
+
+<body class="container">
+    <!-- header started  -->
+    <header class="text-center text-success py-5">
+        <h1>Hello user !!</h1>
+        <h2>Welcome to my bookStore</h2>
+    </header>
+
+    <!-- main started  -->
+    <main>
+        <section>
+            <!-- search field  -->
+
+            <div class="input-group mb-3 w-75 mx-auto">
+                <input id="search-field" type="text" class="form-control" placeholder="Search book name what you need"
+                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button onclick="loadBook()" class="btn btn-outline-secondary" type="button"
+                    id="search-button">Search</button>
+                   
+            </div>
+
+            <!-- display field  -->
+
+            <div id="display-details" class="row row-cols-1 row-cols-md-2 g-4">
+                <p id="total-book">
+
+                </p>
+
+
+
+            </div>
+
+        </section>
+    </main>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="js/style.js"></script>
 </body>
+
 </html>
