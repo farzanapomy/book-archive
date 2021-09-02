@@ -28,7 +28,8 @@ const loadBook = () => {
 
 const displayBook = books => {
     searchResul.innerText = `The result Found: ${books.numFound}`;
-    const bookDetails = books.docs;
+    const bookDetails = books.docs.slice(0,10);
+    displayContainer.textContent='';
     bookDetails.forEach(book => {
         const div = document.createElement('div');
         div.classList.add('col')
