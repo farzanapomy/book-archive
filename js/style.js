@@ -10,15 +10,17 @@ const loadBook = () => {
     const url = `https://openlibrary.org/search.json?q=${searchText}`;
     fetch(url)
         .then(res => res.json())
-        .then(data => displayBook(data.docs))
+        .then(data => displayBook(data.docs));
+    // console.log(data.docs);
 
     // clear field 
     searchField.value = '';
 }
 
-//.slice(0, 10) 
+//
 
 const displayBook = (books) => {
+    // console.log(books)
     displayContainer.textContent = '';
     books.forEach(book => {
         const div = document.createElement('div');
@@ -29,25 +31,21 @@ const displayBook = (books) => {
            <div class="card-body">
            
                  <h5 class="card-title"></h5>
-                 <p class="card-text text-primary fs-2">Book Name : ${book.title}</p>
-                 <p class="card-text text-primary fs-3">author_name : ${book.author_name}</p>
-                <p class="card-text">Publish Date :${book?.publish_date }</p>
-                <p class="card-text">Publisher :${book.publisher.slice(0, 5)}</p>
+                 <p class="card-text text-primary fs-3">Book Name : ${book.title}</p>
+                 <p class="card-text text-primary fs-4">author_name : ${book.author_name}</p>
+                <p class="card-text">Publish Year :${book?.publish_year}</p>
+                <p class="card-text">Publisher :${book.publisher}</p>
             </div>
         </div> 
         `
         displayContainer.appendChild(div);
+
         // console.log(book);
     })
 
-
     //  error handling for emply field 
-
     searchResul.innerText = `The result Found: ${books.length}  `;
-
-
-
-
-
-
+    if (searchResul.innerText.length = '') {
+        searchField.innerText = 'No result found';
+    }
 }
