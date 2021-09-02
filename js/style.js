@@ -34,13 +34,16 @@ const displayBook = books => {
         div.classList.add('col')
         div.innerHTML = `
         <div class="card h-75  border border-3 border-warning rounded">
-                 <img class="h-75 w-50" src=" https://covers.openlibrary.org/b/id/${book?.cover_i}-M.jpg">
+                 <img class="h-75 img-fluid" src=" https://covers.openlibrary.org/b/id/${book?.cover_i}-M.jpg">
            <div class="card-body">
                  <p class="card-title"></p>
-                 <p class="card-text text-primary fs-3">Book Name : ${book.title}</p>
-                 <p class="card-text text-primary fs-4">Author Name : ${book.author_name}</p>
-                 <p class="card-text">Publish Year :${book?.publish_year}</p>
-                 <p class="card-text">Publisher :${book.publisher}</p>
+                 <p class="card-text text-primary fs-4">${book.title}</p>
+                 <p class="card-text text-primary fs-5">Author Name : ${book.author_name}</p>
+                 <p class="card-text fs-5">Publish Year :${book?.publish_year}</p>
+                 <p class="card-text fs-5">Publisher :${book.publisher}</p>      
+                 <a class="btn btn-primary px-3" target="_blank"  href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Dstripbooks-intl-ship&field-keywords=${book.title}" >
+                 Buy Now
+                </a>
             </div>
         </div>
         `
