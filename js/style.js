@@ -24,7 +24,7 @@ const loadBook = () => {
 
 
 
-// displayData 
+// displayData  style="background-color: #202020b7
 
 const displayBook = books => {
     const result = searchResult.innerText = `The result Found: ${books.numFound}`;
@@ -36,12 +36,12 @@ const displayBook = books => {
         div.innerHTML = `
         <div class="card h-75  border border-3 border-warning rounded">
                  <img class="h-75 img-fluid" src=" https://covers.openlibrary.org/b/id/${book?.cover_i}-M.jpg">
-           <div class="card-body text-white" style="background-color: #202020b7">
+           <div class="card-body ">
                  <p class="card-title"></p>
-                 <p class="card-text fs-4">${book.title}</p>
-                 <p class="card-text fs-5">Author Name : ${book.author_name}</p>
-                 <p class="card-text fs-5">Publish Year :${book?.publish_year[0]}</p>
-                 <p class="card-text fs-5">Publisher :${book.publisher.slice(0, 10)}</p>      
+                 <p class="card-text fs-4 fw-bold">${book.title}</p>
+                 <p class="card-text fs-6">Author Name : ${book.author_name}</p>
+                 <p class="card-text fs-6">Publish Year :${book?.publish_year[0]}</p>
+                 <p class="card-text fs-6">Publisher :${book.publisher.slice(0, 10)}</p>      
                  <a class="btn btn-primary px-3" target="_blank"  href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Dstripbooks-intl-ship&field-keywords=${book.title}" >
                  Buy Now
                 </a>
